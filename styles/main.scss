@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.loader{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background-color: #fff;
+    z-index: 8;
+    display: none;
+    &.active{
+        display: block;
+    }
+    &__image{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        animation: loaderRotate 2s infinite;
+        transition: all ease 1s;
+    }
+}
+
+@keyframes loaderRotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+
+}
